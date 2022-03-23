@@ -105,11 +105,13 @@ verbos_tercera=[
     "es",
     "eres",
     "puede",
-    "aprender",
-    "comprender",
-    "estudiar",
-    "necesitar"
+    "aprende",
+    "comprende",
+    "estudia",
+    "necesita"
     ]
+
+
 print("\nBot: Hola que tal!, soy el bot para que puedas saber más sobre unity, ¿como te llamas?")
 name = input("Yo: ");
 
@@ -138,6 +140,7 @@ while (salir == 0):
         #Es una pregunta
         res = res+1;
         pregunta=texto[res:res1]
+        pregu=pregunta;
         pregunta=pregunta.split()
         longitud=len(pregunta);
         
@@ -149,6 +152,7 @@ while (salir == 0):
         ###########################################################################################
         ###########################################################################################
         ###########################################################################################
+        
         
         
         #Esta es una pregunta simple =====  interrogativo + verbo posesivo + verbo en infinitivo + preposicion + comlemento + preposicion + complemento
@@ -171,7 +175,10 @@ while (salir == 0):
             #2222222222222222
             
             
+        
+       
             
+        
         #Esta es una pregunta simple =====  interrigativo + verbo en tercera + complemento
         #                                   ¿Qué es unity?
         elif (pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in complemento):
@@ -238,9 +245,27 @@ while (salir == 0):
         else:
             print("\nBot : No entiendo tu lenguaje ")
     
-    if(res != 0):
+    
+    verbos_tercera=[
+        "es",
+        "eres",
+        "puede",
+        ]
+    
+    if(res==10):
+        print("\nBot: soy un robot que carece de mucha inteligencia, porque mi programador carecer de información lógica")
+    
+    if(res != 0 or res != 10):
         if(pregunta[0] == "quién"):
-            print("")
+            res = texto.find("puede"); 
+            
+            if(res > 1):
+                print("\nBot: Tu puedes programar, lo que tu puedas imaginar");
+        
+                
+            
+                
+                
         elif(pregunta[0] == "qué"):
             print("")
         elif(pregunta[0] == "cuál"):
