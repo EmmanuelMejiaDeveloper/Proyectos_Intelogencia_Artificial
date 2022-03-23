@@ -15,7 +15,20 @@ interrogativos=[
     "dónde",
     "cuándo",
     "cuánto",
-    "por qué"
+    "por",
+    "qué"
+    ]
+
+articlos_def_indef=[
+    "el",
+    "la",
+    "los",
+    "las",
+    ######
+    "un",
+    "una",
+    "unos",
+    "unas"
     ]
 
 preposiciones=[
@@ -135,9 +148,18 @@ while (salir == 0):
         ###########################################################################################
         
         
+        #Esta es una pregunta simple =====  interrogativo + verbo posesivo + verbo en infinitivo + preposicion + comlemento + preposicion + complemento
+        #                                   ¿Qué necesito saber para programar en unity?
+        if (pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in verbos and pregunta[3] in preposiciones and pregunta[4] in complemento and pregunta[5] in preposiciones and pregunta[6] in complemento):
+            print("8")
+            
+        
+        
+        
+        
         #Esta es una pregunta simple =====  interrigativo + verbo posesivo + verbo infinitivo + preposicion + complemento
         #                                   ¿Qué puedo aprender en unity?
-        if(pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in verbos and pregunta[3] in preposiciones and pregunta[4] in complemento):
+        elif(pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in verbos and pregunta[3] in preposiciones and pregunta[4] in complemento):
             print("Es una pregunta chida")
         #Esta es una pregunta simple =====  interrigativo + verbo en tercera + complemento
         #                                   ¿Qué es unity?
@@ -152,30 +174,48 @@ while (salir == 0):
         #                                   ¿Dónde puedo programar?
         elif (pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in complemento):
             print("este es el 4o")
+            
+            
+        elif(longitud>5):
+            
+            #Esta es una pregunta simple =====  interrigativo + verbo tercera + articulos + compleneto + preposicion + complemento
+            #                                   ¿Cómo es la programación en unity?
+            
+           
+            if(pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in articlos_def_indef and pregunta[3] in complemento and pregunta[4] in preposiciones and pregunta[5] in complemento):
+                print("6")
+            
+        
+        
+        #Esta es una pregunta simple =====  interrigativo + verbo tercera + articulos + preposicion + complemento
+        #                                   ¿Qué es la programación?
+        elif(pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in articlos_def_indef and pregunta[3] in complemento):
+            print("7")
+        
         
         #Esto es la respuesta si no esta bien la misma
         else:
-            print("No entidno tu lenguaje: ")
+            print("\nBot : No entidno tu lenguaje: ")
        
     else:
         if(res > -1 or res1 > -1):
             #Existe una pregunta pero no esta conclusa
             num = random.randint(0,3);
             if(num == 0):
-                print("\n Creo que estas haciendo una pregunta, pero le faltan los signos de interrogación");   
+                print("\nBot :Creo que estas haciendo una pregunta, pero le faltan los signos de interrogación");   
             if(num == 1):
-                print("\n Oh! vaya, creo has olvidado poder un signo de interrogación, no logro comprender lo que quieres preguntar")
+                print("\nBot : Oh! vaya, creo has olvidado poder un signo de interrogación, no logro comprender lo que quieres preguntar")
             if(num == 2):
-                print("\n Hermano, carezco de inteligencia, no puedo comprender tu pregunta si no estan los dos simbolos de interrogación")
+                print("\nBot : Hermano, carezco de inteligencia, no puedo comprender tu pregunta si no estan los dos simbolos de interrogación")
                 
             if(num == 3):
-                print("\n A mi programador le hace hace falta dotarme de inteligencia sobre el lenguaje natural, por favor, podrías usar los '¿?', así podré comprenderte mejor")
+                print("\nBot : A mi programador le hace hace falta dotarme de inteligencia sobre el lenguaje natural, por favor, podrías usar los '¿?', así podré comprenderte mejor")
                     
         
             
         else:
             #esta es una frase
-            print("Esta diciendo algo");
+            print("\nBot :Esta diciendo algo");
     
     
 
