@@ -31,6 +31,7 @@ articlos_def_indef=[
     "unas"
     ]
 
+
 preposiciones=[
     "a",
     "ante",
@@ -117,6 +118,8 @@ nombre= ("Emmanuel");
 print("\nBot: Que tal ",nombre,", ¿En que puedo ayudarte?")
 salir =0
 
+res=0
+
 
 while (salir == 0):
     texto = input("Yo: ");
@@ -152,6 +155,9 @@ while (salir == 0):
         #                                   ¿Qué necesito saber para programar en unity?
         if (pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in verbos and pregunta[3] in preposiciones and pregunta[4] in complemento and pregunta[5] in preposiciones and pregunta[6] in complemento):
             print("8")
+            res =1;
+            
+            #111111111111111
             
         
         
@@ -161,19 +167,38 @@ while (salir == 0):
         #                                   ¿Qué puedo aprender en unity?
         elif(pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in verbos and pregunta[3] in preposiciones and pregunta[4] in complemento):
             print("Es una pregunta chida")
+            res =2;
+            #2222222222222222
+            
+            
+            
         #Esta es una pregunta simple =====  interrigativo + verbo en tercera + complemento
         #                                   ¿Qué es unity?
         elif (pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in complemento):
             print("esta es la segunda")
+            res =3;
+            #333333333333333333333333
+            
+            
+            
+            
           #Esta es una pregunta simple =====  interrigativo + verbo posesivo + preposicion + complemento
           #                                   ¿Qué aprendo en unity?
         elif (pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in preposiciones and pregunta[3] in complemento):
             print("este es el 3o")
+            res =4;
+            
+            #44444444444444444444444444
+            
             
         #Esta es una pregunta simple =====  interrigativo + verbo posesivo + complemento
         #                                   ¿Dónde puedo programar?
         elif (pregunta[0] in interrogativos  and pregunta[1] in verbos_yo and pregunta[2] in complemento):
             print("este es el 4o")
+            res =5;
+            
+            #5555555555555555555555555
+            
             
             
         elif(longitud>5):
@@ -184,6 +209,11 @@ while (salir == 0):
            
             if(pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in articlos_def_indef and pregunta[3] in complemento and pregunta[4] in preposiciones and pregunta[5] in complemento):
                 print("6")
+                res =6;
+                
+                #666666666666666666666666
+                
+                
             
         
         
@@ -191,11 +221,40 @@ while (salir == 0):
         #                                   ¿Qué es la programación?
         elif(pregunta[0] in interrogativos  and pregunta[1] in verbos_tercera and pregunta[2] in articlos_def_indef and pregunta[3] in complemento):
             print("7")
+            res =7;
+            #777777777777777777777777777777
         
+        
+    
+        
+        #---------------------------------------------------------------
+        #---------------Aqui se comienza a evaluar----------------------
+        #---------------------------------------------------------------
+       
+        
+       
         
         #Esto es la respuesta si no esta bien la misma
         else:
-            print("\nBot : No entidno tu lenguaje: ")
+            print("\nBot : No entiendo tu lenguaje ")
+    
+    if(res != 0):
+        if(pregunta[0] == "quién"):
+            print("")
+        elif(pregunta[0] == "qué"):
+            print("")
+        elif(pregunta[0] == "cuál"):
+            print("")
+        elif(pregunta[0] == "cómo"):
+            print("")
+        elif(pregunta[0] == "dónde"):
+            print("")
+        elif(pregunta[0] == "cuánto"):
+            print("")
+        elif(pregunta[0] == "por" and pregunta[0] == "qué"):
+            print("")
+        
+        
        
     else:
         if(res > -1 or res1 > -1):
